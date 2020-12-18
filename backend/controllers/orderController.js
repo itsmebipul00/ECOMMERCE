@@ -1,9 +1,9 @@
 import asyncHandler from 'express-async-handler'
 import Order from '../models/orderModel.js'
 
-// @desc    Create new order
-// @route   POST /api/orders
-// @access  Private
+//     Create new order
+//    POST /api/orders
+//   Private
 const addOrderItems = asyncHandler(async (req, res) => {
   const {
     orderItems,
@@ -37,9 +37,9 @@ const addOrderItems = asyncHandler(async (req, res) => {
   }
 })
 
-// @desc    Get order by ID
-// @route   GET /api/orders/:id
-// @access  Private
+//     Get order by ID
+//    GET /api/orders/:id
+//   Private
 const getOrderById = asyncHandler(async (req, res) => {
   const order = await Order.findById(req.params.id).populate(
     'user',
@@ -54,9 +54,9 @@ const getOrderById = asyncHandler(async (req, res) => {
   }
 })
 
-// @desc    Update order to paid
-// @route   GET /api/orders/:id/pay
-// @access  Private
+//     Update order to paid
+//    GET /api/orders/:id/pay
+//   Private
 const updateOrderToPaid = asyncHandler(async (req, res) => {
   const order = await Order.findById(req.params.id)
 
@@ -79,9 +79,9 @@ const updateOrderToPaid = asyncHandler(async (req, res) => {
   }
 })
 
-// @desc    Update order to delivered
-// @route   GET /api/orders/:id/deliver
-// @access  Private/Admin
+//     Update order to delivered
+//    GET /api/orders/:id/deliver
+//   Private/Admin
 const updateOrderToDelivered = asyncHandler(async (req, res) => {
   const order = await Order.findById(req.params.id)
 
@@ -98,17 +98,17 @@ const updateOrderToDelivered = asyncHandler(async (req, res) => {
   }
 })
 
-// @desc    Get logged in user orders
-// @route   GET /api/orders/myorders => limiting the orders to the user that is logged in
-// @access  Private
+//     Get logged in user orders
+//    GET /api/orders/myorders => limiting the orders to the user that is logged in
+//   Private
 const getMyOrders = asyncHandler(async (req, res) => {
   const orders = await Order.find({ user: req.user._id })
   res.json(orders)
 })
 
-// @desc    Get all orders
-// @route   GET /api/orders
-// @access  Private/Admin
+//     Get all orders
+//    GET /api/orders
+//   Private/Admin
 const getOrders = asyncHandler(async (req, res) => {
   const orders = await Order.find({}).populate('user', 'id name')
   res.json(orders)

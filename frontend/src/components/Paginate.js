@@ -1,7 +1,7 @@
 import React from 'react'
 import { Pagination } from 'react-bootstrap'
 import { LinkContainer } from 'react-router-bootstrap'
-
+//if(!admin){ if(keyword) `/search/${keyword}/page/${x + 1}` else `/page/${x + 1}` } else{ `/admin/productlist/${x + 1}` }
 const Paginate = ({ pages, page, isAdmin = false, keyword = '' }) => {
   return (
     pages > 1 && (

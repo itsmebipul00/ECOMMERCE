@@ -48,3 +48,4 @@ dispatch is also a store function
 useSelector => get pieces of state from the global state
 useDispatch => dispatching our actions
 redux-thunk => enables the ability to return functions from the action creators which does all sorts of async stuffs first and uses the dispatcher. thunk is used as a middleware
+
