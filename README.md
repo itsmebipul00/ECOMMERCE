@@ -7,7 +7,7 @@ Admin area for customers, products & orders managment</br>
 Shopping Cart, User Profiles(with Orders), Checkout process(with PayPal), Order Delivery Status</br>
 
 ### Teach Stack:
-React</br>
+React and Redux</br>
 Express and Node</br>
 MongoDB Atlas</br>
 PayPal API</br>
