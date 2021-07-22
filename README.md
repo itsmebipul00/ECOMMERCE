@@ -1,5 +1,5 @@
 ## Fully featured e-Commerce platform 
-Customers could buy,rate or review the products listed on the website by Product Owners. If a prodcut is bought they could also manage and check the delivery status. Moreover, the product owners can manage the customers, products and orders through the Admin section.</br>
+Customers could search, buy, rate or review the products listed on the website by Product Owners. If a prodcut is bought they could also manage and check the delivery status. Moreover, the product owners can manage the customers, products and orders through the Admin section. Orders, Users and Products are paginated and the checkout process is integrated with PayPal.</br>
 
 ### Features:
 Product Search, Pagination, Carousel, Reviews and Ratings</br>
